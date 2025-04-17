@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-zinc-900 text-zinc-100;
+}
+
+/* General Layout */
+.section-body,
+.watchlist {
+  width: 100%;
+  min-height: 100vh;
+  margin-bottom: 20px;
+}
+
+.section {
+  @apply pt-20 lg:pt-32;
+}
+
+.container {
+  @apply px-4 mx-auto lg:px-8 xl:max-w-6xl;
+}
+
+/* Header */
+.menu-btn {
+  @apply w-10 h-10 grid place-items-center bg-zinc-800 border border-zinc-700 rounded-xl shadow-md hover:bg-zinc-700 transition-all active:scale-95;
+}
+@media (width >= 48rem) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+/* Navbar */
+.navbar {
+  @apply absolute top-full mt-2 right-0 min-w-40 p-3 bg-zinc-800/90 rounded-2xl border border-zinc-700 scale-90 opacity-0 invisible transition-all md:static md:flex md:items-center md:mt-0 md:opacity-100 md:visible md:scale-100;
+  backdrop-filter: blur(16px);
+}
+
+.navbar.active {
+  @apply opacity-100 scale-100 visible;
+}
+
+.nav-link {
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-zinc-400 hover:text-white transition-colors;
+}
+
+.logout {
+  @apply grid items-center mt-1 md:mt-0 ml-0 md:ml-2 h-9 px-4 text-sm font-medium tracking-wide bg-red-500 text-white rounded-lg hover:bg-red-400 active:bg-red-600 transition-all;
+}
+
+@media (width >= 48rem) {
+  .nav-link-contect {
+    display: none;
+  }
+}
+
+.nav-link.active {
+  @apply text-white duration-300;
+}
+
+.navbar .active-box {
+  @apply absolute bg-sky-400/20 rounded-lg -z-10 transition-all;
+}
+
+/* Buttons */
+.btn {
+  @apply h-9 flex items-center gap-2 px-4 rounded-xl font-medium text-sm border border-zinc-700 transition-colors;
+}
+
+.btn-error {
+  @apply mt-4 px-4 py-2 text-white bg-red-600 hover:bg-red-500 active:bg-red-700 rounded-md transition;
+}
+
+.btn-blue {
+  @apply mt-4 px-4 py-2 bg-sky-600 text-white hover:bg-sky-500 active:bg-sky-700 rounded-md transition;
+}
+
+.btn-secondary {
+  @apply mt-4 px-4 py-2 bg-zinc-100 text-zinc-900 hover:bg-zinc-200 active:bg-zinc-300 rounded-md;
+}
+
+.btn .material-symbols-rounded {
+  @apply text-[18px];
+}
+
+.btn:has(.material-symbols-rounded) {
+  @apply pr-3;
+}
+
+.btn-primary {
+  @apply h-11 bg-sky-500 text-white hover:bg-sky-400 active:bg-sky-600 rounded-xl transition;
+}
+
+.btn-outline {
+  @apply h-11 bg-transparent border border-zinc-600 text-zinc-300 hover:bg-zinc-700 active:bg-zinc-600 transition;
+}
+
+/* Watchlist Input Fields */
+.label {
+  @apply block text-zinc-300 text-sm font-normal mt-2 mb-1;
+}
+
+.text-field {
+  @apply block outline-none w-full px-3 py-3 text-sm bg-zinc-800 border border-zinc-700 rounded-xl hover:border-zinc-600 focus:border-sky-500 focus:ring-1 focus:ring-sky-500 transition-all;
+}
+
+.text-field::placeholder {
+  @apply text-zinc-500;
+}
+
+/* Images */
+.img-box {
+  @apply bg-zinc-800 overflow-hidden rounded-xl;
+}
+
+.img-cover {
+  @apply w-full h-full object-cover;
+}
+
+/* Titles */
+.title-1 {
+  @apply text-[22px] font-semibold text-zinc-100;
+}
+
+/* Completed Section Titles */
+.headline-1,
+.headline-2 {
+  @apply max-w-max;
+  background: linear-gradient(90deg, #e0e0e0, #a1a1aa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headline-1 {
+  @apply text-5xl leading-tight font-bold lg:text-[55px] lg:leading-[1.15];
+}
+
+.headline-2 {
+  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold;
+}

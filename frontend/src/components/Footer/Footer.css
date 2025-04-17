@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+.footer {
+  @apply w-full bg-indigo-600 text-white text-center py-8 px-5 shadow-[0_-4px_10px_rgba(0,0,0,0.1)] border-t-4 border-white;
+}
+
+.footer p {
+  @apply text-sm text-zinc-300 leading-relaxed my-2;
+}
+
+.footer .social-icons {
+  @apply flex justify-center items-center space-x-4 mt-5;
+}
+
+.footer .social-icons a {
+  @apply text-white text-2xl no-underline transition-colors duration-300;
+}
+
+.footer .social-icons a:hover {
+  @apply text-yellow-400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    @apply text-sm py-6 px-4;
+  }
+
+  .footer .social-icons a {
+    @apply text-xl mx-2;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    @apply text-xs py-5 px-3;
+  }
+
+  .footer .social-icons a {
+    @apply text-lg mx-1;
+  }
+}
